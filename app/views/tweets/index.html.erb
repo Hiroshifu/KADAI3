@@ -1,8 +1,9 @@
 <% if flash[:notice] %>
    <%= flash[:notice] %>
 <% end %>
-
-
+<article>
+<div class = "content">
+    </div>
 <% @tweet.each do |e| %>
   <p><%= e.message %></p>
   <p><%= e.tdate %></p>
@@ -10,5 +11,5 @@
   <%= link_to '削除', "/tweets/#{e.id}" ,method: :delete %>
   <%= link_to '編集', "/tweets/#{e.id}/edit" %>
 <% end %>
-  
+</article>
 <%= link_to 'ツイートする', '/tweets/new' %>  
